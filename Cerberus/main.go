@@ -13,9 +13,9 @@ var (
 )
 
 func main() {
-	target := flag.String("t", "", "The target IP address.")
-	ports := flag.String("p", "", "The port(s) to scan.")
-	PandoraScan := flag.Bool("v", false, "Scan for pandora.")
+	target := flag.String("t", "", "The target IP address or hostname")
+	ports := flag.String("p", "", "The port(s) to scan, separated by commas")
+	PandoraScan := flag.Bool("v", false, "Enable Pandora-specific scanning mode")
 
 	flag.Parse()
 	if *target == "" || *ports == "" {

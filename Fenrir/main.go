@@ -15,10 +15,10 @@ import (
 
 func main() {
 
-	target := flag.String("t", "", "target host")
-	port := flag.Int("s", 0, "http server port")
-	users := flag.String("u", "", "Users list file path")
-	passwords := flag.String("p", "", "Passwords dictionary file path")
+	target := flag.String("t", "", "Target host (IP or domain)")
+	port := flag.Int("s", 0, "Port number for the Pandora server")
+	users := flag.String("u", "", "File path to the list of usernames")
+	passwords := flag.String("p", "", "File path to the password dictionary")
 	flag.Parse()
 	if *target == "" || *port == 0 || *users == "" || *passwords == "" {
 		fmt.Println("Error: Missing required flags.")
